@@ -4,18 +4,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
+@RestController
+@RequestMapping("/api")
 public class TestController {
-    @RestController
-    @RequestMapping("/api")
-    public class firstController {
-/*
-    @Value("${name}")
-    private  String name;
-
- */
-
-        @GetMapping(value="/get")
+    @GetMapping(value="/get")
         public String hello(){
             return "Hello, ";
         }
@@ -25,4 +17,4 @@ public class TestController {
             return String.format("Hello %s!", name);
         }
     }
-}
+
