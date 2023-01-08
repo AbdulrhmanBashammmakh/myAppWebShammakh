@@ -2,15 +2,13 @@ package net.Bashammakh.myAppWebShammakh.Models;
 
 
 import jakarta.persistence.*;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
+
+
 
 @Entity
-@Setter
-@Getter
-@Builder
 public class Specialty {
+  /*
     public Specialty() {
         super();
     }
@@ -19,8 +17,28 @@ public class Specialty {
         super();
         this.SpecialtyName = SpecialtyName;
     }
+
+   */
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long ID ;
+    @Column()
     private String SpecialtyName;
+
+    public long getID() {
+        return ID;
+    }
+
+    public void setID(long ID) {
+        this.ID = ID;
+    }
+
+    public String getSpecialtyName() {
+        return SpecialtyName;
+    }
+
+    public void setSpecialtyName(String specialtyName) {
+        SpecialtyName = specialtyName;
+    }
 }

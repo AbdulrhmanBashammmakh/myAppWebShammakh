@@ -41,11 +41,15 @@ public class UserDataLoader implements CommandLineRunner {
 
         }
         System.out.println(rolesRepository.count());
+        /*
         if (specialtyRepository.count() == 0){
-            Specialty specialty =new Specialty("general - عام");
+            Specialty specialty =new Specialty();
+            specialty.setSpecialtyName("General");
             specialtyRepository.save(specialty);
         }
         System.out.println(specialtyRepository.count());
+
+         */
         if (userRepository.count() == 0){
            Users Admin =new Users("Admin","Admin","Ad@ad.com","123456","773886998",true,false);
             userRepository.save(Admin);
